@@ -1,0 +1,233 @@
+ip - 54.152.255.204
+username - phaneendra
+password - 1234
+Beta IP: 100.25.93.104
+prod IP : 50.16.245.253
+
+
+34.204.218.6
+
+
+username 
+cd /home
+cd ubuntu/
+cd Amop/
+cd amop-uat
+sudo git pull
+1234
+
+uat :
+cd /home/ubuntu/Amop/amop-uat
+
+beta : 
+cd /home/ubuntu/Amop/amop-beta
+
+uat:
+cd /home/ubuntu/Amop/amop-uat/Dashboard
+
+prod : 
+cd /home/ubuntu/Amop/amop-prod => wrong cd leave it 
+
+cd /home/ubuntu/Amop/amop-2.0-prod-backend
+
+
+phaneendra@ip-10-3-3-136:/home/ubuntu/Amop/amop-2.0-prod-backend$
+
+remove - for the building command  : 
+sudo docker compose up  --build -d --force-recreate telegence_bulkchange
+
+
+sudo docker compose up  --build -d --force-recreate pod19_bulkchange
+
+sudo docker compose up  --build -d --force-recreate pod19_carrier_api_sync
+------------------------------------------------->
+
+First enter Ip address in putty
+Next enter "username"
+next "cd /home"
+next "ls -l"
+next "cd ubuntu/"
+next enter "ls"  you will see AMOP
+next enter "cd Amop/"
+next enter "ls" you will see AMOP-UAT
+next enter "cd amop-uat"
+next enter "ls"  you will see telegence ,common utils
+for pulling code enter "sudo git pull"
+next enter password - "1234"
+
+
+next enter this for build code in putty 
+
+for telegence :   
+sudo docker compose up  --build -d --force-recreate telegence_bulkchange
+sudo docker logs -f --tail 3000 telegence_bulkchange
+
+sudo docker compose up  --build -d --force-recreate telegencebeta_bulkchange
+sudo docker logs -f --tail 3000 telegencebeta_bulkchange
+
+
+For webbing  : 
+sudo docker-compose up  --build -d --force-recreate webbing_bulkchange
+sudo docker logs -f --tail 400 webbing_bulkchange
+sudo docker compose up  --build -d --force-recreate webbing_bulkchange
+
+sudo docker-compose up  --build -d --force-recreate kore_bulkchange
+sudo docker logs -f --tail 450 kore_bulkchange
+sudo docker compose up  --build -d --force-recreate kore_bulkchange
+
+
+for verizon : 
+sudo docker-compose up  --build -d --force-recreate verizon_bulkchange
+sudo docker logs -f --tail 500 verizon_bulkchange
+sudo docker compose up  --build -d --force-recreate verizon_bulkchange
+
+for pod19: 
+sudo docker-compose up  --build -d --force-recreate pod19_bulkchange
+sudo docker logs -f --tail 600 pod19_bulkchange
+sudo docker compose up  --build -d --force-recreate pod19_bulkchange
+
+sudo docker logs --tail 450 pod19_bulkchange
+sudo docker compose up  --build -d --force-recreate pod19_carrier_api_sync
+sudo docker logs -f --tail 3000 pod19_carrier_api_sync
+
+
+sudo docker logs -f --tail 3000 kore_carrier_api_sync
+sudo docker compose up  --build -d --force-recreate kore_carrier_api_sync
+phani@ip-10-2-1-223:/home/ubuntu/Amop/amop-beta$ sudo docker logs -f --tail 80000 kore_carrier_api_sync
+
+
+sudo docker logs -f --tail 3000 telegence_carrier_api_sync
+sudo docker compose up  --build -d --force-recreate telegence_carrier_api_sync
+phani@ip-10-2-1-223:/home/ubuntu/Amop/amop-beta$ sudo docker logs -f --tail 80000 telegence_carrier_api_sync
+
+verizon_carrier_api_sync
+sudo docker logs -f --tail 3000 verizon_carrier_api_sync
+sudo docker compose up  --build -d --force-recreate verizon_carrier_api_sync
+phani@ip-10-2-1-223:/home/ubuntu/Amop/amop-beta$ sudo docker logs -f --tail 80000 verizon_carrier_api_sync
+
+phani@ip-10-2-1-223:/home/ubuntu/Amop/amop-beta$ sudo docker logs -f --tail 3000 kore_carrier_api_sync
+
+
+
+
+sudo docker-compose up  --build -d --force-recreate pondiot_bulkchange
+sudo docker logs --tail 500 pondiot_bulkchange
+sudo docker compose up  --build -d --force-recreate pondiot_bulkchange
+
+
+sudo docker-compose up  --build -d --force-recreate pondiot_bulkchange
+sudo docker logs --tail 500 pondiot_bulkchange
+sudo docker compose up  --build -d --force-recreate pondiot_bulkchange
+
+
+sudo docker-compose up  --build -d --force-recreate ciscojasper_bulkchange
+sudo docker logs --tail 450 ciscojasper_bulkchange
+sudo docker compose up  --build -d --force-recreate ciscojasper_bulkchange
+
+
+sudo docker-compose up  --build -d --force-recreate teal_bulkchange 
+sudo docker logs --tail 400 teal_bulkchange
+sudo docker compose up  --build -d --force-recreate teal_bulkchange
+
+sudo docker-compose up  --build -d --force-recreate tmobilejasper_bulkchange 
+sudo docker logs --tail 400 tmobilejasper_bulkchange
+sudo docker compose up  --build -d --force-recreate tmobilejasper_bulkchange
+
+
+sudo docker-compose up  --build -d --force-recreate rogers_bulkchange 
+sudo docker logs --tail 450 rogers_bulkchange
+sudo docker compose up  --build -d --force-recreate rogers_bulkchange 
+
+
+
+Authenticating with public key "ACE_Phaneendra" from agent
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Jul  3 09:40:25 UTC 2025
+
+  System load:  0.0                Temperature:           -273.1 C
+  Usage of /:   6.1% of 192.69GB   Processes:             134
+  Memory usage: 4%                 Users logged in:       1
+  Swap usage:   0%                 IPv4 address for ens5: 10.2.1.59
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+3 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Thu Jul  3 07:43:44 2025 from 183.82.127.96
+phaneendra@ip-10-2-1-59:~$ cd /home
+phaneendra@ip-10-2-1-59:/home$ ls -l
+total 12
+drwxr-x--- 4 gopiteja   gopiteja   4096 Jun 30 13:20 gopiteja
+drwxr-x--- 4 phaneendra phaneendra 4096 Jun 30 10:29 phaneendra
+drwxrwxrwx 5 ubuntu     ubuntu     4096 Jun 30 13:03 ubuntu
+phaneendra@ip-10-2-1-59:/home$ cd ubuntu/
+phaneendra@ip-10-2-1-59:/home/ubuntu$ ls
+Amop
+phaneendra@ip-10-2-1-59:/home/ubuntu$ cd Amop/
+phaneendra@ip-10-2-1-59:/home/ubuntu/Amop$ ls
+amop-uat
+phaneendra@ip-10-2-1-59:/home/ubuntu/Amop$ cd amop-uat
+phaneendra@ip-10-2-1-59:/home/ubuntu/Amop/amop-uat$ ls
+README.md  common_utils        package-lock.json
+Telegence  docker-compose.yml  postgresql.jar
+phaneendra@ip-10-2-1-59:/home/ubuntu/Amop/amop-uat$ sudo git pull
+[sudo] password for phaneendra:
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 8 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (8/8), 1.04 KiB | 213.00 KiB/s, done.
+From https://gitlab.amop.services/algonox/amop-uat
+   f0120a7a..2d0c3055  BulkChange -> origin/BulkChange
+   5752baeb..ecb5c184  main       -> origin/main
+Updating f0120a7a..2d0c3055
+Fast-forward
+ Telegence/app/Telegence.py | 25 +++++++++++++++----------
+ 1 file changed, 15 insertions(+), 10 deletions(-)
+phaneendra@ip-10-2-1-59:/home/ubuntu/Amop/amop-uat$ sudo docker-compose up  --build -d --force-recreate telegence_bulkchange
+WARN[0000] /home/ubuntu/Amop/amop-uat/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+[+] Building 53.0s (17/17) FINISHED
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
