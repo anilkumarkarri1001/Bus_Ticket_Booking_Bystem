@@ -1,0 +1,9 @@
+==>  how copy and run a project  locally in the system 
+1) download the repo as the zip file and extract it 
+2) now create the new venv environment 
+3) python -m venv aenv ==> to create a venv 
+4) .\aenv\Scripts\activate ==> to activate the venv 
+5) now install all the requirements in the requirements.txt file 
+6) apply the migrations 
+7) now run the django server 
+8) now we are able to see the output withtout having having installation version conflicts 
